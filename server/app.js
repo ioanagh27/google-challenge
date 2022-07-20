@@ -2,13 +2,22 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-const data = require("./websites")
 app.use(express.json());
+const data = require('./data');
 
 
-// app.get("./", (req, res) =>{
-//     res.status(200).send("asdf")
-// })
+console.log(data)
+
+app.get("/", (req, res) =>{
+    res.status(200).send('Welcome to our fake Google site!')
+})
+
+app.get('/websites', (req, res) => {
+    let websites = data;
+    res.json({
+        websites: websites.map(w =>w['website'])
+    })
+})
 
 
 module.exports = app;
