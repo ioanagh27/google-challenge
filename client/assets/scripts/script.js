@@ -1,6 +1,7 @@
 const allWebsites = document.getElementById("all-websites");
 const randomWebsite = document.getElementById("random-website");
 
+const data = require('../../../server/data');
 
 function displayWebsites(e){
     e.preventDefault()
@@ -15,9 +16,10 @@ function displayRandomWebsite(e){
     e.preventDefault()
     fetch('http://localhost:3000/websites/random')
         .then(resp => resp.text())
-        .then(website => randomWebsite.textContent = website)
+        .then(randomwebsite => randomWebsite.textContent = randomwebsite)
 }
 
-function randPage() {window.open("http://localhost:3000/websites/random", "_blank")}
-
-
+function randPage() {
+    const site = window.open("http://localhost:3000/websites/random", "_blank");
+    return site
+}

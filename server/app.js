@@ -8,9 +8,10 @@ const data = require('./data');
 
 function getRandomWebsite(arr) {
     let randomWebsite = Math.floor(Math.random() * arr.length);
+    
     return arr[randomWebsite];
   }
-
+  
 app.get("/", (req, res) =>{
     res.status(200).send('Welcome to our fake Google site!')
 })

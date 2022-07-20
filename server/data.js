@@ -1,14 +1,14 @@
 const websites = [
-    "https://www.amazon.co.uk/",
-    "https://github.com/",
-    "https://www.youtube.com/",
-    "https://www.facebook.com/",
-    "https://www.triwa.com/",
-    "https://unsplash.com/",
-    "https://www.nationalgeographic.com",
-    "https://www.w3schools.com/",
-    "https://getbootstrap.com/",
-    "https://css-tricks.com/"
+    "http://www.amazon.co.uk/",
+    "http://github.com/",
+    "http://www.youtube.com/",
+    "http://www.facebook.com/",
+    "http://www.triwa.com/",
+    "http://unsplash.com/",
+    "http://www.nationalgeographic.com",
+    "http://www.w3schools.com/",
+    "http://getbootstrap.com/",
+    "http://css-tricks.com/"
 ] 
 
 module.exports = websites;
