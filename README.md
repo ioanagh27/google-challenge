@@ -1,4 +1,4 @@
-# google-challenge
+# Google-Challenge
 
 ## Task
 
