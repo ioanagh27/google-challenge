@@ -1,9 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname + "/../client"));
+
 const data = require('./data');
+const path = require("path");
 
 
 function getRandomWebsite(arr) {
@@ -13,7 +17,7 @@ function getRandomWebsite(arr) {
   }
   
 app.get("/", (req, res) =>{
-    res.status(200).send('Welcome to our fake Google site!')
+    res.sendFile(path.resolve("../client/index.html"))
 })
 
 app.get('/websites', (req, res) => {
